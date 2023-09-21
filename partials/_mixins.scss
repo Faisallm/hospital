@@ -1,0 +1,22 @@
+// mixins are functions
+// these functions can take arguments with default values
+@mixin button($textColor: $white-color, $backgroundColor: $secondary-color) {
+    display: inline-block;
+    // the button should fit its contents
+    width: fit-content;
+    padding: 0.75rem 1rem;
+    border-radius: 0.4rem;
+    background: $backgroundColor;
+    color: $textColor;
+    // the button should have a cursor of pointer
+    cursor: pointer;
+    // because we are setting a hover
+    transition: all 400ms ease;
+    &:hover {
+        // lighten the background color by 8%,
+        // endeavour to use the correct syntax
+        background: lighten($background: $backgroundColor, $amount: 8%);
+        // x-offset, y-offset, blur radius, color
+        box-shadow: 0 1rem 1.6rem rgba($black-color, 0.15);
+    }
+}

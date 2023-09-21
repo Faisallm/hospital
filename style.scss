@@ -1,1 +1,5 @@
+// we are importing the config file before the
+// general partial file, because we can get to us it
 @import './partials/config';
+@import './partials/mixins';
+@import './partials/general';
