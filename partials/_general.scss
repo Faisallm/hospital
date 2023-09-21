@@ -31,7 +31,7 @@ section {
     // here we are grabbing the paragraph
     &>p {
         text-align: center;
-        width: 45%;
+        width: 42%;
         // top = 0.6rem
         // left & right = auto = center
         // bottom = 2.5rem
@@ -55,6 +55,19 @@ section {
         // width of the container class will be 90%
         width: $container-md;
     }
+    section {
+        &>p {
+            width: 55%;
+        }
+    }
 }
 
 // smaller devices
+@media screen and (max-width: 600px) {
+    section {
+        &>p {
+            // 90% container width
+            width: $container-md;
+        }
+    }
+}
